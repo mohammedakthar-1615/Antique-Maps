@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Antique Maps</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <meta name="description" content="Contact our cartography experts for inquiries, appraisals, or viewings.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-details {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-details h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+            opacity: 0.85;
+        }
+
+        .contact-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            height: 300px;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media(max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon.svg" alt="Antique Maps" width="28" height="28">
+                Antique Maps
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Home2</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="register.html" class="btn btn-mobile">Register</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction"
+                    style="font-size: 0.8rem; font-weight: 700; width: 44px;">LTR</button>
+                <button class="toggle-btn" onclick="toggleDark()" aria-label="Toggle Dark Mode">🌙</button>
+                <a href="register.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Register</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="container fade-in"
+        style="margin-top: 120px; min-height: 60vh; max-width: 1100px; margin-bottom: 80px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 15px;">Get in Touch</h1>
+            <p style="font-size: 1.15rem; opacity: 0.8;">Inquire about a specific map, schedule a viewing, or join our
+                newsletter list.</p>
+        </div>
+
+        <!-- NEW SECTION: What to Expect -->
+        <div
+            style="background: rgba(201, 151, 8, 0.05); border: 1px solid var(--border); border-radius: 12px; padding: 40px; margin-bottom: 60px;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; text-align: center;">What to Expect</h2>
+            <div style="display: flex; gap: 30px; justify-content: space-between; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 15px;">
+                        1</div>
+                    <h4 style="margin-bottom: 10px;">Submission</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8;">Send us your request or high-resolution photos of your
+                        map.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 15px;">
+                        2</div>
+                    <h4 style="margin-bottom: 10px;">Review</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8;">Our experts evaluate historical significance,
+                        condition, and provenance.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div
+                        style="width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 15px;">
+                        3</div>
+                    <h4 style="margin-bottom: 10px;">Consultation</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8;">We provide a detailed report, appraisal value, or
+                        acquisition offer within 48 hours.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info fade-in">
+                <div class="contact-image">
+                    <!-- Elegant thematic map view -->
+                    <img src="assets/images/antique_globes.jpg" alt="Antique Map Study">
+                </div>
+
+                <div class="contact-details">
+                    <h3>Headquarters</h3>
+                    <p><strong>Address:</strong> 123 Great Russell St, Bloomsbury, London WC1B 3DG, United Kingdom</p>
+                    <p><strong>Phone:</strong> +1 (888) MAP-RARE</p>
+                    <p><strong>Email:</strong> info@antiquemaps.com</p>
+
+                    <h3 style="margin-top: 25px;">Store Hours</h3>
+                    <p><strong>Mon-Fri:</strong> 10:00 AM - 5:00 PM</p>
+                    <p><strong>Sat:</strong> 11:00 AM - 3:00 PM</p>
+                    <p><strong>Sun:</strong> Closed</p>
+                </div>
+            </div>
+
+            <div
+                style="background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <form
+                    onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you shortly.'); this.reset();"
+                    style="display: flex; flex-direction: column; flex-grow: 1;">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="E.g. John Smith" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Reason for Contact</label>
+                        <select id="subject" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="inquiry">Map Inquiry</option>
+                            <option value="appraisal">Appraisal Request</option>
+                            <option value="viewing">Schedule a Viewing</option>
+                            <option value="newsletter">Join Newsletter</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="flex-grow: 1; display: flex; flex-direction: column;">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="6" placeholder="How can we help you?" required
+                            style="flex-grow: 1; min-height: 150px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn"
+                        style="width: 100%; padding: 16px; font-size: 1.1rem; margin-top: 10px;">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Our Gallery Locations -->
+        <div style="margin-top: 80px; margin-bottom: 60px;">
+            <h2 class="section-title">
+                International Presences</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div
+                    style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
+                    <div
+                        style="height: 150px; background: url('assets/images/world_map_1687.jpg') center/cover; opacity: 0.8;">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="margin-bottom: 10px; font-size: 1.4rem;">New York Gallery</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; margin-bottom: 15px;">By private appointment only.
+                        </p>
+                        <p style="margin: 0; font-weight: 500;">+1 (212) 555-0198</p>
+                    </div>
+                </div>
+                <div
+                    style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
+                    <div
+                        style="height: 150px; background: url('assets/images/europe_1630.jpg') center/cover; opacity: 0.8;">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="margin-bottom: 10px; font-size: 1.4rem;">Amsterdam Office</h3>
+                        <p style="opacity: 0.8; font-size: 0.95rem; margin-bottom: 15px;">Sourcing and institutional
+                            relations.</p>
+                        <p style="margin: 0; font-weight: 500;">+31 20 555 0123</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-image">
+            <!-- Google Maps Embed for a central London location -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9050860368153!2d-0.1281594!3d51.5194133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b31dc34468f%3A0xe54d6de91834f8!2sBritish%20Museum!5e0!3m2!1sen!2suk!4v1709564000000!5m2!1sen!2suk"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2 style="margin: 0; margin-bottom: 10px;">
+                    <a href="index.html" class="logo" style="margin-left: 0; margin-right: 0; padding-left: 0;">
+                        <img src="assets/images/favicon.svg" alt="Antique Maps" width="28" height="28">
+                        Antique Maps
+                    </a>
+                </h2>
+                <p>Preserving the art and history of cartography for collectors worldwide.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.956a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="collection.html">Collection</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h3 class="footer-heading">Support</h3>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Returns</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Subscribe for updates on new arrivals.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit" class="btn">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Antique Map & Atlas Dealer. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

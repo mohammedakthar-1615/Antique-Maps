@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Antique Maps | Invest in History | Rare Atlases</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="The world's premier dealer in rare antique maps and atlases. Start your historical investment today.">
+    <meta name="keywords" content="antique maps, rare atlases, vintage cartography, map investment">
+    <meta name="author" content="Antique Map & Atlas Dealer">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Marketing V2 Specific Overrides */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 36, 0.7), rgba(26, 26, 36, 0.9)), url("assets/images/world_map_1687.jpg") center/cover no-repeat;
+            height: 90vh;
+        }
+
+        .pricing-card.featured-tier {
+            border-width: 3px;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                border-color: var(--secondary);
+                box-shadow: 0 0 0 0 rgba(198, 167, 94, 0.4);
+            }
+
+            70% {
+                border-color: var(--accent);
+                box-shadow: 0 0 0 10px rgba(198, 167, 94, 0);
+            }
+
+            100% {
+                border-color: var(--secondary);
+                box-shadow: 0 0 0 0 rgba(198, 167, 94, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .investment-card {
+                flex-direction: column !important;
+                height: auto !important;
+            }
+
+            .investment-img {
+                width: 100% !important;
+                min-height: 250px;
+            }
+
+            .investment-content {
+                width: 100% !important;
+                padding: 20px !important;
+            }
+
+            .standard-card {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+
+            .standard-card>div {
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon.svg" alt="Antique Maps" width="28" height="28">
+                Antique Maps
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html" class="active" style="color: var(--secondary);">Home2</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" class="btn btn-mobile">Get Priority Access</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction"
+                    style="font-size: 0.8rem; font-weight: 700; width: 44px;">LTR</button>
+                <button class="toggle-btn" onclick="toggleDark()" aria-label="Toggle Dark Mode">🌙</button>
+                <a href="register.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Register</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero fade-in">
+        <div class="hero-content">
+            <span
+                style="color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 10px; display: block;">The
+                Collector's Choice</span>
+            <h1 style="font-size: 4rem;">Invest in Rare Historical Treasures</h1>
+            <p>Own a piece of history. Our museum-grade antique maps are vetted by world-leading cartographers for
+                authenticity and investment value.</p>
+            <div
+                style="display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+                <a href="collection.html" class="btn" style="padding: 15px 40px;">Browse Rare Pieces</a>
+                <a href="#pricing" class="btn btn-outline"
+                    style="padding: 15px 40px; border-color: #fff; color: #fff;">View Memberships</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container fade-in" style="margin-top: 80px;">
+        <h2 class="section-title">The Antique Maps Standard</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="card standard-card"
+                style="display: flex; flex-direction: row; align-items: center; padding: 30px; gap: 30px; text-align: left;">
+                <div style="font-size: 3.5rem; flex-shrink: 0;">📜</div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">Vetted Authenticity</h3>
+                    <p style="opacity: 0.8; margin: 0;">Every map comes with a 'Certificate of Origin'
+                        unconditionally guaranteeing its historical era and authenticity.</p>
+                </div>
+            </div>
+            <div class="card standard-card"
+                style="display: flex; flex-direction: row; align-items: center; padding: 30px; gap: 30px; text-align: left; background: var(--card-bg);">
+                <div style="font-size: 3.5rem; flex-shrink: 0;">💎</div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">Investment Grade</h3>
+                    <p style="opacity: 0.8; margin: 0;">We focus on rare pieces with proven appreciation
+                        potential, sourced from private estates and auctions globally.</p>
+                </div>
+            </div>
+            <div class="card standard-card"
+                style="display: flex; flex-direction: row; align-items: center; padding: 30px; gap: 30px; text-align: left;">
+                <div style="font-size: 3.5rem; flex-shrink: 0;">🌎</div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">Concierge Shipping</h3>
+                    <p style="opacity: 0.8; margin: 0;">White-glove, museum-quality packaging and fully insured
+                        shipping to any location on the planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container fade-in" style="margin-top: 100px;">
+        <h2 class="section-title">Investment Highlights</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+            <div class="card investment-card"
+                style="display: flex; flex-direction: row; overflow: hidden; height: 300px;">
+                <div class="investment-img"
+                    style="width: 40%; background: url('assets/images/europe_1630.jpg') center/cover;"></div>
+                <div class="card-content investment-content"
+                    style="width: 60%; display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 5px;"><a href="map-detail.html">Europe 1630</a>
+                            </h3>
+                            <div class="card-meta" style="margin-bottom: 0;">
+                                <span>Willem Blaeu</span>
+                                <span>17th Century</span>
+                            </div>
+                        </div>
+                        <div class="price" style="font-size: 1.8rem; margin: 0;">₹85,000</div>
+                    </div>
+                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 25px;">A magnificent
+                        depiction of 17th-century Europe, known for its ornate border illustrations and high historical
+                        value. Perfect for serious investors.</p>
+                    <a href="map-detail.html" class="btn btn-outline" style="align-self: flex-start;">Analyze Piece</a>
+                </div>
+            </div>
+
+            <div class="card investment-card"
+                style="display: flex; flex-direction: row; overflow: hidden; height: 300px;">
+                <div class="card-content investment-content"
+                    style="width: 60%; display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 5px;"><a href="map-detail.html">Celestial Map
+                                    1742</a></h3>
+                            <div class="card-meta" style="margin-bottom: 0;">
+                                <span>Johann Doppelmayr</span>
+                                <span>18th Century</span>
+                            </div>
+                        </div>
+                        <div class="price" style="font-size: 1.8rem; margin: 0;">₹125,000</div>
+                    </div>
+                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 25px;">An exquisite
+                        astronomical chart mapping the constellations with stunning allegorical figures. Extremely rare
+                        and highly sought after.</p>
+                    <a href="map-detail.html" class="btn btn-outline" style="align-self: flex-start;">Analyze Piece</a>
+                </div>
+                <div class="investment-img"
+                    style="width: 40%; background: url('assets/images/celestial_map_1742.jpg') center/cover;"></div>
+            </div>
+
+            <div class="card investment-card"
+                style="display: flex; flex-direction: row; overflow: hidden; height: 300px;">
+                <div class="investment-img"
+                    style="width: 40%; background: url('assets/images/africa_1851.jpg') center/cover;"></div>
+                <div class="card-content investment-content"
+                    style="width: 60%; display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 5px;"><a href="map-detail.html">Africa 1851</a>
+                            </h3>
+                            <div class="card-meta" style="margin-bottom: 0;">
+                                <span>John Tallis</span>
+                                <span>19th Century</span>
+                            </div>
+                        </div>
+                        <div class="price" style="font-size: 1.8rem; margin: 0;">₹60,000</div>
+                    </div>
+                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 25px;">A detailed
+                        Victorian-era map featuring intricate vignettes of local wildlife and scenery. Represents stable
+                        appreciation for collectors.</p>
+                    <a href="map-detail.html" class="btn btn-outline" style="align-self: flex-start;">Analyze Piece</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="collection.html" class="btn">View Full Portfolio</a>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Journey Through Time -->
+    <section class="container fade-in" style="margin-top: 100px;">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+            <h2 class="section-title">A Journey
+                Through Time</h2>
+            <p style="opacity: 0.8; font-size: 1.1rem; line-height: 1.6;">Follow the evolution of global cartography
+                across three defining centuries of discovery.</p>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <!-- 16th Century -->
+            <div style="position: relative; border-radius: 12px; overflow: hidden; height: 350px; box-shadow: var(--shadow); cursor: pointer;"
+                class="time-card">
+                <div
+                    style="position: absolute; inset: 0; background: url('assets/images/world_map_1687.jpg') center/cover; filter: grayscale(50%) brightness(0.6); transition: all 0.4s ease;">
+                </div>
+                <div
+                    style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; background: linear-gradient(transparent, rgba(26,26,36,0.95));">
+                    <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.5rem;">16th Century</h3>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 1.1rem;">Age of Discovery</h4>
+                    <p style="color: #ddd; font-size: 0.95rem; line-height: 1.5; margin: 0;">Witness the first attempts
+                        to map the newly encountered Americas and the establishment of global trade routes.</p>
+                </div>
+            </div>
+
+            <!-- 17th Century -->
+            <div style="position: relative; border-radius: 12px; overflow: hidden; height: 350px; box-shadow: var(--shadow); cursor: pointer;"
+                class="time-card">
+                <div
+                    style="position: absolute; inset: 0; background: url('assets/images/europe_1630.jpg') center/cover; filter: grayscale(50%) brightness(0.6); transition: all 0.4s ease;">
+                </div>
+                <div
+                    style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; background: linear-gradient(transparent, rgba(26,26,36,0.95));">
+                    <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.5rem;">17th Century</h3>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 1.1rem;">The Golden Age</h4>
+                    <p style="color: #ddd; font-size: 0.95rem; line-height: 1.5; margin: 0;">Highly ornamental maps
+                        focusing on extreme accuracy, heavily influenced by the mighty Dutch cartographic houses.</p>
+                </div>
+            </div>
+
+            <!-- 18th Century -->
+            <div style="position: relative; border-radius: 12px; overflow: hidden; height: 350px; box-shadow: var(--shadow); cursor: pointer;"
+                class="time-card">
+                <div
+                    style="position: absolute; inset: 0; background: url('assets/images/celestial_map_1742.jpg') center/cover; filter: grayscale(50%) brightness(0.6); transition: all 0.4s ease;">
+                </div>
+                <div
+                    style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; background: linear-gradient(transparent, rgba(26,26,36,0.95));">
+                    <h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.5rem;">18th Century</h3>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 1.1rem;">The Age of Reason</h4>
+                    <p style="color: #ddd; font-size: 0.95rem; line-height: 1.5; margin: 0;">A shift towards scientific
+                        mapping, precise triangulations, and the detailing of national borders and topographies.</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .time-card:hover div:first-child {
+                filter: grayscale(0%) brightness(0.8) scale(1.05);
+            }
+        </style>
+    </section>
+
+    <!-- NEW SECTION: Upcoming Exhibitions -->
+    <section class="container fade-in" style="margin-top: 100px;">
+        <div
+            style="background: linear-gradient(135deg, var(--card-bg), rgba(201, 151, 8, 0.05)); border: 1px solid var(--secondary); border-radius: 20px; padding: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <div
+                    style="display: inline-block; padding: 6px 14px; background: rgba(201, 151, 8, 0.15); color: var(--secondary); border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 20px;">
+                    Virtual Exhibition</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--text);">Mapping the Stars: Celestial
+                    Cartography</h2>
+                <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 30px; line-height: 1.6;">
+                    Join our chief historians for an exclusive online gallery tour exploring how humanity mapped the
+                    heavens before the invention of the modern telescope.
+                </p>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <button class="btn">Register for Event</button>
+                    <span style="font-size: 0.95rem; opacity: 0.7; font-weight: 500;">📅 October 15, 2026 | 2:00 PM
+                        GMT</span>
+                </div>
+            </div>
+
+            <div style="flex: 0.8; min-width: 300px; display: grid; gap: 20px;">
+                <!-- Mini Schedule Cards -->
+                <div
+                    style="background: var(--bg); padding: 25px; border-radius: 12px; border-left: 4px solid var(--secondary);">
+                    <h4 style="margin: 0 0 5px 0; font-size: 1.1rem;">Guest Lecture: The Mercator Projection</h4>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">Dr. Amelia Vance • October 22, 2026</p>
+                </div>
+                <div
+                    style="background: var(--bg); padding: 25px; border-radius: 12px; border-left: 4px solid var(--accent);">
+                    <h4 style="margin: 0 0 5px 0; font-size: 1.1rem;">Acquisition Reveal: The 1513 Ptolemy </h4>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">Members Only • November 5, 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="container fade-in" style="margin-top: 100px; margin-bottom: 60px;">
+        <h2 class="section-title">Exclusive Collector Tiers</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 40px; opacity: 0.8;">Secure your place in the
+            most prestigious cartography circle. Gain early access to museum-grade acquisitions.</p>
+
+        <div class="grid pricing-grid">
+            <!-- Free -->
+            <div class="card pricing-card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="pricing-title">Free</h3>
+                    <div class="price pricing-price">₹0<span>/month</span></div>
+                    <p class="pricing-desc">Perfect for beginners and enthusiasts looking to explore our digital
+                        archives.</p>
+                    <ul class="pricing-features">
+                        <li>✔ Basic digital archive access (watermarked)</li>
+                        <li>✔ Monthly newsletter "The Cartographer's Ink"</li>
+                        <li>✔ Standard resolution images</li>
+                        <li>✔ Access to public forum discussions</li>
+                        <li>✔ Community map identification</li>
+                        <li class="disabled">✖ Physical print discounts</li>
+                        <li class="disabled">✖ Early access to rare maps</li>
+                        <li class="disabled">✖ Private expert consultations</li>
+                        <li class="disabled">✖ VIP auction bidding</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join for Free</a>
+                </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="card pricing-card featured-tier">
+                <div class="tier-badge">Most Popular</div>
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="pricing-title">Medium</h3>
+                    <div class="price pricing-price">₹999<span>/month</span></div>
+                    <p class="pricing-desc">For serious collectors wanting high-quality downloads and member perks.</p>
+                    <ul class="pricing-features">
+                        <li>✔ Full digital archive access (unwatermarked)</li>
+                        <li>✔ Weekly curated newsletters & investment tips</li>
+                        <li>✔ High-resolution downloads (4K)</li>
+                        <li>✔ 10% off physical prints & custom framing</li>
+                        <li>✔ Priority email support</li>
+                        <li>✔ Access to advanced map filtering tools</li>
+                        <li class="disabled">✖ Early access to rare maps</li>
+                        <li class="disabled">✖ Private expert consultations</li>
+                        <li class="disabled">✖ VIP auction bidding</li>
+                    </ul>
+                    <a href="#" class="btn" style="width: 100%; margin-top: auto;">Get Medium</a>
+                </div>
+            </div>
+
+            <!-- Valuable -->
+            <div class="card pricing-card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="pricing-title" style="color: var(--secondary);">Valuable</h3>
+                    <div class="price pricing-price">₹4,999<span>/month</span></div>
+                    <p class="pricing-desc">The ultimate experience with VIP access to the rarest museum-grade pieces.
+                    </p>
+                    <ul class="pricing-features">
+                        <li>✔ Everything in Medium</li>
+                        <li>✔ Unlimited 8K downloads & commercial usage</li>
+                        <li>✔ 25% off physical prints & custom framing</li>
+                        <li>✔ 48-hour early access to rare map acquisitions</li>
+                        <li>✔ Free bi-annual appraisal services</li>
+                        <li>✔ Dedicated account manager & phone support</li>
+                        <li>✔ Exclusive invitations to private gallery showings</li>
+                        <li>✔ VIP auction bidding proxy service</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%; margin-top: auto;">Become VIP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container fade-in"
+        style="margin-top: 100px; margin-bottom: 60px; background: linear-gradient(135deg, var(--card-bg), var(--bg)); padding: 80px 40px; border-radius: 20px; border: 1px solid var(--border); text-align: center;">
+
+        <div style="display: flex; justify-content: center; gap: 8px; color: var(--secondary); margin-bottom: 30px;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+            </svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+            </svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+            </svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+            </svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+            </svg>
+        </div>
+
+        <h2
+            style="font-size: 2.5rem; font-style: italic; font-weight: 300; line-height: 1.4; max-width: 800px; margin: 0 auto 40px; color: var(--text);">
+            "The most transparent acquisition process in the industry. A critical resource for any serious cartographic
+            society. Their sourcing capacity is world-class."
+        </h2>
+
+        <div>
+            <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--secondary);">Sarah T. & James H.</h4>
+            <span style="font-size: 1rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px;">Leading Global
+                Collectors</span>
+        </div>
+
+    </section>
+
+    <section class="container">
+        <!-- CTA Section -->
+        <div class="fade-in"
+            style="margin-top: 100px; text-align: center; background: var(--card-bg); padding: 60px 40px; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow);">
+            <h2 class="section-title">Ready to start your
+                collection?</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.8; font-size: 1.1rem;">
+                Join our exclusive community of map collectors today and get access to the world's most beautiful
+                historical cartography.
+            </p>
+            <a href="register.html" class="btn" style="padding: 15px 40px; font-size: 1rem;">Get Started</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2 style="margin: 0; margin-bottom: 10px;">
+                    <a href="index.html" class="logo" style="margin-left: 0; margin-right: 0; padding-left: 0;">
+                        <img src="assets/images/favicon.svg" alt="Antique Maps" width="28" height="28">
+                        Antique Maps
+                    </a>
+                </h2>
+                <p>Preserving the art and history of cartography for collectors worldwide.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.956a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="collection.html">Collection</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h3 class="footer-heading">Support</h3>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Returns</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Subscribe for updates on new arrivals.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit" class="btn">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Antique Map & Atlas Dealer. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

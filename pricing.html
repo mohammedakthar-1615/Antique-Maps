@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing & Memberships | Antique Maps</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <meta name="description"
+        content="Join our exclusive community of map collectors with a membership plan that fits your passion.">
+    <meta name="keywords" content="antique maps membership, rare map pricing, cartography club">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon.svg" alt="Antique Maps" width="28" height="28">
+                Antique Maps
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Home2</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" class="btn btn-mobile">Register</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction"
+                    style="font-size: 0.8rem; font-weight: 700; width: 44px;">LTR</button>
+                <button class="toggle-btn" onclick="toggleDark()" aria-label="Toggle Dark Mode">🌙</button>
+                <a href="register.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Register</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero fade-in"
+        style="min-height: 400px; height: 50vh; margin-top: 0; background-image: linear-gradient(rgba(26, 26, 36, 0.6), rgba(26, 26, 36, 0.8)), url('assets/images/pricing_hero.jpg'); background-position: center; background-size: cover;">
+        <div class="hero-content" style="max-width: 900px;">
+            <h1 style="font-size: 3rem; margin-bottom: 15px;">Membership Plans</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 20px;">Join our exclusive community of map collectors with an
+                access plan that fits your passion.</p>
+            <p style="opacity: 0.9; font-size: 1.05rem; margin: 0 auto; line-height: 1.7;">Whether you are a casual
+                enthusiast looking to admire the beauty of historical cartography or a serious investor seeking
+                museum-grade acquisitions, our tiered memberships provide unparalleled access, expert appraisals, and
+                exclusive perks tailored to your level of interest.</p>
+        </div>
+    </section>
+
+    <section class="container fade-in" style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="grid pricing-grid">
+            <!-- Free -->
+            <div class="card pricing-card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="pricing-title">Free</h3>
+                    <div class="price pricing-price">₹0<span>/month</span></div>
+                    <p class="pricing-desc">Perfect for beginners and enthusiasts looking to explore our digital
+                        archives.</p>
+                    <ul class="pricing-features">
+                        <li>✔ Basic digital archive access (watermarked)</li>
+                        <li>✔ Monthly newsletter "The Cartographer's Ink"</li>
+                        <li>✔ Standard resolution images</li>
+                        <li>✔ Access to public forum discussions</li>
+                        <li>✔ Community map identification</li>
+                        <li class="disabled">✖ Physical print discounts</li>
+                        <li class="disabled">✖ Early access to rare maps</li>
+                        <li class="disabled">✖ Private expert consultations</li>
+                        <li class="disabled">✖ VIP auction bidding</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%; margin-top: auto;">Join for Free</a>
+                </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="card pricing-card featured-tier">
+                <div class="tier-badge">Most Popular</div>
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="pricing-title">Medium</h3>
+                    <div class="price pricing-price">₹999<span>/month</span></div>
+                    <p class="pricing-desc">For serious collectors wanting high-quality downloads and member perks.</p>
+                    <ul class="pricing-features">
+                        <li>✔ Full digital archive access (unwatermarked)</li>
+                        <li>✔ Weekly curated newsletters & investment tips</li>
+                        <li>✔ High-resolution downloads (4K)</li>
+                        <li>✔ 10% off physical prints & custom framing</li>
+                        <li>✔ Priority email support</li>
+                        <li>✔ Access to advanced map filtering tools</li>
+                        <li class="disabled">✖ Early access to rare maps</li>
+                        <li class="disabled">✖ Private expert consultations</li>
+                        <li class="disabled">✖ VIP auction bidding</li>
+                    </ul>
+                    <a href="#" class="btn" style="width: 100%; margin-top: auto;">Get Medium</a>
+                </div>
+            </div>
+
+            <!-- Valuable -->
+            <div class="card pricing-card">
+                <div class="card-content" style="text-align: center;">
+                    <h3 class="pricing-title" style="color: var(--secondary);">Valuable</h3>
+                    <div class="price pricing-price">₹4,999<span>/month</span></div>
+                    <p class="pricing-desc">The ultimate experience with VIP access to the rarest museum-grade pieces.
+                    </p>
+                    <ul class="pricing-features">
+                        <li>✔ Everything in Medium</li>
+                        <li>✔ Unlimited 8K downloads & commercial usage</li>
+                        <li>✔ 25% off physical prints & custom framing</li>
+                        <li>✔ 48-hour early access to rare map acquisitions</li>
+                        <li>✔ Free bi-annual appraisal services</li>
+                        <li>✔ Dedicated account manager & phone support</li>
+                        <li>✔ Exclusive invitations to private gallery showings</li>
+                        <li>✔ VIP auction bidding proxy service</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%; margin-top: auto;">Become VIP</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Enterprise & Museum Sourcing -->
+        <div
+            style="margin-top: 80px; background: rgba(201, 151, 8, 0.05); border: 1px solid var(--border); border-radius: 16px; padding: 50px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Institutional Sourcing</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7; opacity: 0.8; margin-bottom: 20px;">We partner with
+                    universities, libraries, and museums worldwide to fulfill specific acquisition mandates and build
+                    comprehensive cartographic collections.</p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; opacity: 0.9;">
+                    <li style="margin-bottom: 10px;">✔ Dedicated institutional account manager</li>
+                    <li style="margin-bottom: 10px;">✔ Advanced metadata and provenance reporting</li>
+                    <li style="margin-bottom: 10px;">✔ Tax-exempt and grant-funded purchase support</li>
+                    <li style="margin-bottom: 10px;">✔ High-volume digitization services</li>
+                </ul>
+                <a href="contact.html" class="btn">Contact Institutional Sales</a>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/images/antique_globes.jpg" alt="Institutional Sourcing"
+                    style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: var(--shadow); object-fit: cover; height: 300px;">
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Frequently Asked Questions -->
+        <div style="margin-top: 100px;">
+            <h2 class="section-title">
+                Frequently Asked Questions</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div
+                    style="background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+                    <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--secondary);">Are the physical maps
+                        authentic?</h4>
+                    <p style="opacity: 0.8; line-height: 1.6; margin: 0;">Yes, all physical artifacts sold through our
+                        gallery undergo rigorous provenance and material analysis by our expert conservators to
+                        guarantee absolute authenticity.</p>
+                </div>
+                <div
+                    style="background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+                    <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--secondary);">How are digital
+                        downloads delivered?</h4>
+                    <p style="opacity: 0.8; line-height: 1.6; margin: 0;">Upon subscription, high-resolution scans (up
+                        to 8K depending on your tier) are immediately available for download directly from the map
+                        detail pages.</p>
+                </div>
+                <div
+                    style="background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+                    <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--secondary);">Can I cancel my
+                        membership at any time?</h4>
+                    <p style="opacity: 0.8; line-height: 1.6; margin: 0;">Yes, subscriptions operate on a month-to-month
+                        basis. You can upgrade, downgrade, or pause your membership through your account dashboard at
+                        any time.</p>
+                </div>
+                <div
+                    style="background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+                    <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--secondary);">Do you buy maps from
+                        private collections?</h4>
+                    <p style="opacity: 0.8; line-height: 1.6; margin: 0;">We are always interested in acquiring rare
+                        artifacts. Please contact our acquisitions team via the Contact page to schedule an initial
+                        appraisal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="fade-in"
+            style="margin-top: 100px; text-align: center; background: var(--card-bg); padding: 60px 40px; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow);">
+            <h2 class="section-title">Ready to start your
+                collection?</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.8; font-size: 1.1rem;">
+                Join our exclusive community of map collectors today and get access to the world's most beautiful
+                historical cartography.
+            </p>
+            <a href="register.html" class="btn" style="padding: 15px 40px; font-size: 1rem;">Get Started</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2 style="margin: 0; margin-bottom: 10px;">
+                    <a href="index.html" class="logo" style="margin-left: 0; margin-right: 0; padding-left: 0;">
+                        <img src="assets/images/favicon.svg" alt="Antique Maps" width="28" height="28">
+                        Antique Maps
+                    </a>
+                </h2>
+                <p>Preserving the art and history of cartography for collectors worldwide.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.956a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="collection.html">Collection</a>
+                    <a href="about.html">About Us</a>
+                    <a href="pricing.html">Pricing</a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h3 class="footer-heading">Support</h3>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Returns</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Subscribe for updates on new arrivals.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit" class="btn">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Antique Map & Atlas Dealer. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
