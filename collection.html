@@ -33,6 +33,37 @@
 </script>
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Ensure readable text over background images in curated themes */
+    .theme-card {
+      position: relative;
+      padding: 40px 20px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .theme-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.45));
+      z-index: 0;
+      border-radius: 12px;
+    }
+
+    .theme-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .theme-card::before { background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.5)); }
+    }
+  </style>
 </head>
 
 <body>
@@ -50,11 +81,14 @@
         <li><a href="collection.html" class="active">Collection</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="register.html" class="btn btn-mobile">Register</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction"
-          style="font-size: 0.8rem; font-weight: 700; width: 44px;">LTR</button>
+        <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l-4 4 4 4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/><path d="M21 12H7"/></svg>
+          <span class="sr-only">Toggle text direction</span>
+        </button>
         <button class="toggle-btn" onclick="toggleDark()" aria-label="Toggle Dark Mode">🌙</button>
         <a href="register.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Register</a>
       </div>
@@ -81,18 +115,18 @@
     <div style="margin-bottom: 60px;">
       <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Curated Themes</h3>
       <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div
-          style="background: linear-gradient(rgba(26,26,36,0.6), rgba(26,26,36,0.8)), url('assets/images/celestial_map_1742.jpg') center/cover; padding: 40px 20px; border-radius: 12px; text-align: center; color: white; cursor: pointer; border: 1px solid var(--border);">
+        <div class="theme-card"
+          style="background: url('assets/images/celestial_map_1742.jpg') center/cover;">
           <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Celestial Maps</h4>
           <p style="font-size: 0.9rem; opacity: 0.9; margin: 0;">Mapping the heavens</p>
         </div>
-        <div
-          style="background: linear-gradient(rgba(26,26,36,0.6), rgba(26,26,36,0.8)), url('assets/images/world_map_1687.jpg') center/cover; padding: 40px 20px; border-radius: 12px; text-align: center; color: white; cursor: pointer; border: 1px solid var(--border);">
+        <div class="theme-card"
+          style="background: url('assets/images/world_map_1687.jpg') center/cover;">
           <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Age of Discovery</h4>
           <p style="font-size: 0.9rem; opacity: 0.9; margin: 0;">The expanding world</p>
         </div>
-        <div
-          style="background: linear-gradient(rgba(26,26,36,0.6), rgba(26,26,36,0.8)), url('assets/images/antique_globes.jpg') center/cover; padding: 40px 20px; border-radius: 12px; text-align: center; color: white; cursor: pointer; border: 1px solid var(--border);">
+        <div class="theme-card"
+          style="background: url('assets/images/antique_globes.jpg') center/cover;">
           <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Nautical Charts</h4>
           <p style="font-size: 0.9rem; opacity: 0.9; margin: 0;">Navigating the seas</p>
         </div>

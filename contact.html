@@ -66,6 +66,58 @@
                 height: 200px;
             }
         }
+        /* Accordion styles for FAQ section */
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .accordion-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .accordion-btn {
+            width: 100%;
+            text-align: left;
+            padding: 18px 20px;
+            background: transparent;
+            border: 0;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text);
+        }
+
+        .accordion-btn:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .accordion-btn .icon {
+            transition: transform 0.25s ease;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .accordion-btn[aria-expanded="true"] .icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-panel {
+            padding: 0 20px 18px 20px;
+            font-size: 0.95rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
     </style>
 </head>
 
@@ -84,11 +136,14 @@
                 <li><a href="collection.html">Collection</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="register.html" class="btn btn-mobile">Register</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction"
-                    style="font-size: 0.8rem; font-weight: 700; width: 44px;">LTR</button>
+                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l-4 4 4 4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/><path d="M21 12H7"/></svg>
+                    <span class="sr-only">Toggle text direction</span>
+                </button>
                 <button class="toggle-btn" onclick="toggleDark()" aria-label="Toggle Dark Mode">🌙</button>
                 <a href="register.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Register</a>
             </div>
@@ -100,13 +155,15 @@
         </div>
     </header>
 
-    <section class="container fade-in"
-        style="margin-top: 120px; min-height: 60vh; max-width: 1100px; margin-bottom: 80px;">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 3.5rem; margin-bottom: 15px;">Get in Touch</h1>
-            <p style="font-size: 1.15rem; opacity: 0.8;">Inquire about a specific map, schedule a viewing, or join our
-                newsletter list.</p>
+    <section class="hero fade-in"
+        style="margin-top: 0; min-height: 50vh; background-image: linear-gradient(rgba(26,26,36,0.6), rgba(26,26,36,0.8)), url('assets/images/collection_hero.jpg'); background-position: center; background-size: cover;">
+        <div class="hero-content" style="text-align:center; padding: 80px 20px;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 15px; color: #fff;">Get in Touch</h1>
+            <p style="font-size: 1.15rem; opacity: 0.9; color: rgba(255,255,255,0.9); max-width: 900px; margin: 0 auto;">Inquire about a specific map, schedule a viewing, or join our newsletter list.</p>
         </div>
+    </section>
+
+    <section class="container fade-in" style="max-width: 1100px; margin: 40px auto 80px;">
 
         <!-- NEW SECTION: What to Expect -->
         <div
@@ -242,39 +299,53 @@
         <!-- NEW SECTION: FAQ -->
         <div style="margin-top: 80px;">
             <h2 class="section-title">Frequently Asked Questions</h2>
-            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-                <div
-                    style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 25px; transition: all 0.3s ease; box-shadow: var(--shadow);">
-                    <h4 style="margin-bottom: 10px; font-size: 1.15rem; color: var(--text);">Do you ship
-                        internationally?</h4>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.85; line-height: 1.6;">Yes, we offer fully
-                        insured, white-glove shipping to almost every country worldwide. All items are meticulously
-                        packed to museum standards in custom archival materials.</p>
+            <div class="accordion" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="panel-1" id="accordion-1">
+                            Do you ship internationally?
+                            <span class="icon" aria-hidden="true">▾</span>
+                        </button>
+                    </h3>
+                    <div id="panel-1" class="accordion-panel" role="region" aria-labelledby="accordion-1" hidden>
+                        <p>Yes, we offer fully insured, white-glove shipping to almost every country worldwide. All items are meticulously packed to museum standards in custom archival materials.</p>
+                    </div>
                 </div>
-                <div
-                    style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 25px; transition: all 0.3s ease; box-shadow: var(--shadow);">
-                    <h4 style="margin-bottom: 10px; font-size: 1.15rem; color: var(--text);">Do your maps come with a
-                        certificate of authenticity?</h4>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.85; line-height: 1.6;">Absolutely. Every map we
-                        sell is accompanied by a hand-signed, universally recognized Certificate of Authenticity
-                        guaranteeing its age, condition, and origin.</p>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="panel-2" id="accordion-2">
+                            Do your maps come with a certificate of authenticity?
+                            <span class="icon" aria-hidden="true">▾</span>
+                        </button>
+                    </h3>
+                    <div id="panel-2" class="accordion-panel" role="region" aria-labelledby="accordion-2" hidden>
+                        <p>Absolutely. Every map we sell is accompanied by a hand-signed, universally recognized Certificate of Authenticity guaranteeing its age, condition, and origin.</p>
+                    </div>
                 </div>
-                <div
-                    style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 25px; transition: all 0.3s ease; box-shadow: var(--shadow);">
-                    <h4 style="margin-bottom: 10px; font-size: 1.15rem; color: var(--text);">Can I schedule a private
-                        viewing?</h4>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.85; line-height: 1.6;">Yes, private viewings are
-                        available at our New York and London locations by appointment only. Please select "Schedule a
-                        Viewing" in the contact form, specifying the items of interest.</p>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="panel-3" id="accordion-3">
+                            Can I schedule a private viewing?
+                            <span class="icon" aria-hidden="true">▾</span>
+                        </button>
+                    </h3>
+                    <div id="panel-3" class="accordion-panel" role="region" aria-labelledby="accordion-3" hidden>
+                        <p>Yes, private viewings are available at our New York and London locations by appointment only. Please select "Schedule a Viewing" in the contact form, specifying the items of interest.</p>
+                    </div>
                 </div>
-                <div
-                    style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 25px; transition: all 0.3s ease; box-shadow: var(--shadow);">
-                    <h4 style="margin-bottom: 10px; font-size: 1.15rem; color: var(--text);">Do you buy maps from
-                        private collections?</h4>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.85; line-height: 1.6;">Yes, our acquisitions
-                        team is always looking consistently for high-quality, authentic maps and atlases. Contact us
-                        with detailed descriptions and high-resolution photos of your items for a preliminary
-                        evaluation.</p>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="panel-4" id="accordion-4">
+                            Do you buy maps from private collections?
+                            <span class="icon" aria-hidden="true">▾</span>
+                        </button>
+                    </h3>
+                    <div id="panel-4" class="accordion-panel" role="region" aria-labelledby="accordion-4" hidden>
+                        <p>Yes, our acquisitions team is always looking for high-quality, authentic maps and atlases. Contact us with detailed descriptions and high-resolution photos of your items for a preliminary evaluation.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -344,6 +415,35 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.accordion-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+                    // close all panels
+                    buttons.forEach(b => {
+                        b.setAttribute('aria-expanded', 'false');
+                        const panel = document.getElementById(b.getAttribute('aria-controls'));
+                        if (panel) panel.hidden = true;
+                    });
+                    // open clicked panel when it was closed
+                    if (!expanded) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+                        if (panel) panel.hidden = false;
+                    }
+                });
+
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

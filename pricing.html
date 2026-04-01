@@ -29,11 +29,14 @@
                 <li><a href="collection.html">Collection</a></li>
                 <li><a href="pricing.html" class="active">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="register.html" class="btn btn-mobile">Register</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction"
-                    style="font-size: 0.8rem; font-weight: 700; width: 44px;">LTR</button>
+                <button class="toggle-btn dir-toggle-btn" onclick="toggleDir()" aria-label="Toggle Text Direction">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l-4 4 4 4"/><path d="M3 12h14"/><path d="M17 8l4 4-4 4"/><path d="M21 12H7"/></svg>
+                    <span class="sr-only">Toggle text direction</span>
+                </button>
                 <button class="toggle-btn" onclick="toggleDark()" aria-label="Toggle Dark Mode">🌙</button>
                 <a href="register.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Register</a>
             </div>
@@ -127,9 +130,9 @@
         </div>
 
         <!-- NEW SECTION: Enterprise & Museum Sourcing -->
-        <div
+        <div class="institutional-sourcing"
             style="margin-top: 80px; background: rgba(201, 151, 8, 0.05); border: 1px solid var(--border); border-radius: 16px; padding: 50px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-            <div style="flex: 1; min-width: 300px;">
+            <div class="sourcing-text" style="flex: 1; min-width: 300px;">
                 <h3 style="font-size: 2rem; margin-bottom: 20px;">Institutional Sourcing</h3>
                 <p style="font-size: 1.1rem; line-height: 1.7; opacity: 0.8; margin-bottom: 20px;">We partner with
                     universities, libraries, and museums worldwide to fulfill specific acquisition mandates and build
@@ -142,9 +145,9 @@
                 </ul>
                 <a href="contact.html" class="btn">Contact Institutional Sales</a>
             </div>
-            <div style="flex: 1; min-width: 300px; text-align: center;">
+            <div class="sourcing-image" style="flex: 1; min-width: 300px; text-align: center;">
                 <img src="assets/images/antique_globes.jpg" alt="Institutional Sourcing"
-                    style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: var(--shadow); object-fit: cover; height: 300px;">
+                    style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: var(--shadow); object-fit: cover; height: auto;">
             </div>
         </div>
 

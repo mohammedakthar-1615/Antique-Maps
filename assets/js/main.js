@@ -57,6 +57,42 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // Password visibility toggles (attached after DOM load)
+  const pwdToggles = document.querySelectorAll('.password-toggle');
+  pwdToggles.forEach(btn => {
+    const targetId = btn.dataset.target;
+    const input = document.getElementById(targetId);
+    if (!input) return;
+    // initialize button state
+    btn.setAttribute('aria-pressed', 'false');
+    btn.setAttribute('aria-label', 'Show password');
+    btn.addEventListener('click', () => {
+      const currentlyHidden = input.type === 'password';
+      input.type = currentlyHidden ? 'text' : 'password';
+      btn.setAttribute('aria-pressed', String(currentlyHidden));
+      btn.setAttribute('aria-label', currentlyHidden ? 'Hide password' : 'Show password');
+      btn.innerHTML = currentlyHidden ? '🙈' : '👁';
+    });
+  });
+  // Role selector: persist selection and toggle admin-only UI
+  const roleSelect = document.getElementById('role-select');
+  function applyRole(role) {
+    if (role === 'admin') {
+      document.body.classList.add('admin-mode');
+    } else {
+      document.body.classList.remove('admin-mode');
+    }
+  }
+  if (roleSelect) {
+    roleSelect.addEventListener('change', (e) => {
+      const role = e.target.value;
+      applyRole(role);
+      localStorage.setItem('role', role);
+    });
+  }
+  const savedRole = localStorage.getItem('role') || 'user';
+  applyRole(savedRole);
+  if (roleSelect) roleSelect.value = savedRole;
 });
 
 function toggleDark() {
