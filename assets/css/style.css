@@ -146,6 +146,16 @@ header {
   .nav-actions { gap: 10px; }
 }
 
+/* Fix alignment of brand and nav links in the mid breakpoint around 1024px */
+@media (min-width: 821px) and (max-width: 1100px) {
+  .nav { align-items: center; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .nav-menu { display: flex; align-items: center; }
+  .nav-actions { display: flex; align-items: center; }
+  .nav a { line-height: 1.1; }
+  .logo img { width: 34px; height: 34px; }
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -206,18 +216,31 @@ header {
     display: none;
   }
 
-  /* show controls inside the mobile nav menu */
+}
+
+/* At very small widths, show the controls inside the mobile nav sidebar */
+@media (max-width: 360px) {
   .nav-menu .mobile-controls {
     display: block;
     width: 100%;
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .nav-menu .mobile-controls .toggle-btn {
     min-width: 44px;
     min-height: 44px;
     margin-right: 8px;
+  }
+
+  /* Ensure header action toggles remain hidden at these sizes (already hidden at 900px)
+     but keep rule here in case of cascade order differences */
+  .nav-actions .toggle-btn,
+  .nav-actions .dir-toggle-btn {
+    display: none;
   }
 }
 

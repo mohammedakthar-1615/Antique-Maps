@@ -57,6 +57,44 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // 5. Move theme/dir toggles into mobile sidebar at very small widths (<=360px)
+  function moveTogglesForSmallScreens() {
+    const navMenu = document.querySelector('.nav-menu');
+    const navActions = document.querySelector('.nav-actions');
+    if (!navMenu || !navActions) return;
+    const existing = navMenu.querySelector('.mobile-controls');
+    if (window.innerWidth <= 360) {
+      if (!existing) {
+        const li = document.createElement('li');
+        li.className = 'mobile-controls';
+        li.style.display = 'flex';
+        li.style.alignItems = 'center';
+        li.style.gap = '8px';
+
+        const dirBtn = navActions.querySelector('.dir-toggle-btn');
+        const themeBtn = navActions.querySelector('.toggle-btn:not(.dir-toggle-btn)');
+
+        if (dirBtn) li.appendChild(dirBtn.cloneNode(true));
+        if (themeBtn) li.appendChild(themeBtn.cloneNode(true));
+
+        // Insert at top of nav menu so it appears in the sidebar
+        navMenu.insertBefore(li, navMenu.firstChild);
+        // Update icons/state for newly inserted buttons
+        updateThemeIcon();
+        updateDirIcon();
+      }
+    } else {
+      if (existing) existing.remove();
+    }
+  }
+
+  // Run on load and on resize (debounced)
+  moveTogglesForSmallScreens();
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(moveTogglesForSmallScreens, 150);
+  });
   // Password visibility toggles (attached after DOM load)
   const pwdToggles = document.querySelectorAll('.password-toggle');
   pwdToggles.forEach(btn => {
