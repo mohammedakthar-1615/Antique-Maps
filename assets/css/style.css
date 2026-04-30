@@ -127,7 +127,8 @@ header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  padding: 15px 0;
+  padding: 0;
+  height: 70px;
   transition: all 0.3s ease;
 }
 
@@ -135,6 +136,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Ensure the header container vertically centers content and fills header height */
+.container.nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 /* Medium breakpoint adjustments (fix alignment around 1024px) */
@@ -167,6 +175,51 @@ header {
     white-space: nowrap;
     font-size: 0.95rem;
   }
+
+  /* Ensure proper three-column alignment at ~1024px: logo left, menu centered, actions right */
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+
+  .nav .logo {
+    flex: 0 0 auto;
+    max-width: 40%;
+  }
+
+  .nav-menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 62%;
+    overflow: visible;
+  }
+
+  .nav-actions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 12px;
+  }
+
+  /* Hide hamburger at this breakpoint to avoid duplicate controls */
+  .hamburger { display: none; }
+  
+  /* Prevent action buttons from shrinking and ensure adequate tap target */
+  .nav-actions .btn {
+    flex-shrink: 0;
+    min-width: 140px;
+    padding-left: 14px;
+    padding-right: 14px;
+    white-space: nowrap;
+  }
+
+  /* Ensure the in-menu mobile register link stays hidden at mid sizes */
+  .nav-menu .btn-mobile { display: none; }
 }
 
 .logo {
@@ -1022,4 +1075,29 @@ footer {
   .institutional-sourcing .sourcing-text h3 {
     font-size: 1.25rem !important;
   }
+}
+
+/* Targeted fixes for screens around 1024px to ensure perfect alignment */
+@media (min-width: 1000px) and (max-width: 1050px) {
+  header { height: 72px; }
+  .container.nav { padding-left: 18px; padding-right: 18px; }
+
+  /* Force three-column layout: logo | centered menu | actions */
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+
+  .nav .logo { flex: 0 0 auto; margin-right: 8px; }
+
+  .nav-menu { flex: 1 1 auto; display: flex; justify-content: center; max-width: 58%; }
+
+  .nav ul { gap: 12px; }
+
+  .nav-actions { flex: 0 0 auto; margin-left: 12px; }
+
+  /* Make sure register button is fully visible */
+  .nav-actions .btn { min-width: 160px; padding: 10px 18px; font-size: 0.9rem; }
+
+  /* Prevent the centered menu from wrapping into actions */
+  .nav-menu, .nav ul { white-space: nowrap; overflow: visible; }
+
+  .hamburger { display: none; }
 }
