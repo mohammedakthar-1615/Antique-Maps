@@ -154,6 +154,19 @@ header {
   .nav-actions { display: flex; align-items: center; }
   .nav a { line-height: 1.1; }
   .logo img { width: 34px; height: 34px; }
+
+  /* Prevent nav labels (e.g. "About Us") from wrapping at ~1024px
+     keep links on a single line and slightly reduce spacing */
+  .nav-menu,
+  .nav ul {
+    gap: 14px;
+  }
+
+  .nav-menu a,
+  .nav a {
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
 }
 
 .logo {
